@@ -1,0 +1,11 @@
+{
+  "name": "Ruiz & Davies",
+  "tagline": "Consultoría, desarrollo web y marketing",
+  "url": "https://ruizdavies.com",
+  "defaultLang": "es",
+  "langs": ["es", "en"],
+  "email": "hello@ruizdavies.com",
+  "phone": "+34 666 32 98 13",
+  "whatsapp": "34666329813",
+  "founders": ["Rafael Ruiz", "Luke Davies"]
+}

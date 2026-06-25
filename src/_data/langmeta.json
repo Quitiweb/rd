@@ -1,0 +1,4 @@
+{
+  "es": { "home": "/", "locale": "es_ES", "label": "ES", "other": "en" },
+  "en": { "home": "/en/", "locale": "en_GB", "label": "EN", "other": "es" }
+}

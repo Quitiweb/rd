@@ -1,0 +1,14 @@
+{
+  "name": "ruiz-davies-web",
+  "version": "0.1.0",
+  "description": "Web de Ruiz & Davies — consultoría, desarrollo web y marketing. Estática, bilingüe ES/EN, generada con Eleventy.",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

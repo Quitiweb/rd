@@ -1,0 +1,13 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for lang in site.langs %}
+  <url>
+    <loc>{{ site.url }}{{ langmeta[lang].home }}</loc>
+    <xhtml:link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ langmeta[lang].home }}" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+  </url>
+{%- endfor %}
+</urlset>

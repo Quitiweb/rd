@@ -1,0 +1,118 @@
+{
+  "es": {
+    "metaTitle": "Ruiz & Davies — Consultoría, desarrollo web y marketing",
+    "metaDescription": "Estudio de consultoría, desarrollo web y marketing digital. Construimos webs rápidas y estrategias que hacen crecer tu negocio.",
+    "nav": {
+      "services": "Servicios",
+      "work": "Trabajos",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "eyebrow": "Estudio digital",
+      "title": "Webs y marketing que hacen crecer tu negocio.",
+      "subtitle": "Somos Ruiz & Davies: consultoría, desarrollo web y marketing. Trabajamos con marcas que quieren una presencia digital impecable y resultados medibles.",
+      "ctaPrimary": "Hablemos",
+      "ctaSecondary": "Ver trabajos"
+    },
+    "services": {
+      "title": "Lo que hacemos",
+      "subtitle": "Tres disciplinas, un solo equipo. De la estrategia al código y a la captación.",
+      "items": [
+        {
+          "name": "Consultoría digital",
+          "desc": "Auditamos, definimos estrategia y te ayudamos a tomar las decisiones correctas: posicionamiento, tecnología y crecimiento."
+        },
+        {
+          "name": "Desarrollo web",
+          "desc": "Webs rápidas, accesibles y a medida. Desde landing pages hasta sitios multiidioma con todo el SEO técnico cuidado."
+        },
+        {
+          "name": "Marketing & SEO",
+          "desc": "Captación que funciona: SEO, contenidos y campañas pensadas para atraer clientes reales, no solo visitas."
+        }
+      ]
+    },
+    "work": {
+      "title": "Trabajos",
+      "subtitle": "Una selección de proyectos en los que estamos trabajando.",
+      "visit": "Visitar sitio"
+    },
+    "about": {
+      "title": "Quiénes somos",
+      "body": "Ruiz & Davies nace de la unión de Rafael Ruiz y Luke Davies: desarrollo, diseño y marketing bajo un mismo techo. Combinamos criterio técnico con una mirada comercial para construir productos digitales que se ven bien y, sobre todo, funcionan.",
+      "founders": [
+        { "name": "Rafael Ruiz", "role": "Desarrollo & tecnología" },
+        { "name": "Luke Davies", "role": "Estrategia & marketing" }
+      ]
+    },
+    "contact": {
+      "title": "¿Empezamos?",
+      "subtitle": "Cuéntanos tu proyecto y te respondemos en menos de 24 horas.",
+      "cta": "Escríbenos",
+      "or": "o por WhatsApp"
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados.",
+      "made": "Hecho con cariño en España."
+    }
+  },
+  "en": {
+    "metaTitle": "Ruiz & Davies — Consulting, web development and marketing",
+    "metaDescription": "A consulting, web development and digital marketing studio. We build fast websites and strategies that grow your business.",
+    "nav": {
+      "services": "Services",
+      "work": "Work",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "hero": {
+      "eyebrow": "Digital studio",
+      "title": "Websites and marketing that grow your business.",
+      "subtitle": "We are Ruiz & Davies: consulting, web development and marketing. We work with brands that want a flawless digital presence and measurable results.",
+      "ctaPrimary": "Let's talk",
+      "ctaSecondary": "See our work"
+    },
+    "services": {
+      "title": "What we do",
+      "subtitle": "Three disciplines, one team. From strategy to code to acquisition.",
+      "items": [
+        {
+          "name": "Digital consulting",
+          "desc": "We audit, set strategy and help you make the right calls: positioning, technology and growth."
+        },
+        {
+          "name": "Web development",
+          "desc": "Fast, accessible, bespoke websites. From landing pages to multilingual sites with technical SEO done right."
+        },
+        {
+          "name": "Marketing & SEO",
+          "desc": "Acquisition that works: SEO, content and campaigns built to attract real customers, not just traffic."
+        }
+      ]
+    },
+    "work": {
+      "title": "Work",
+      "subtitle": "A selection of the projects we're working on.",
+      "visit": "Visit site"
+    },
+    "about": {
+      "title": "Who we are",
+      "body": "Ruiz & Davies brings together Rafael Ruiz and Luke Davies: development, design and marketing under one roof. We blend technical judgement with a commercial eye to build digital products that look great and, above all, work.",
+      "founders": [
+        { "name": "Rafael Ruiz", "role": "Development & technology" },
+        { "name": "Luke Davies", "role": "Strategy & marketing" }
+      ]
+    },
+    "contact": {
+      "title": "Shall we start?",
+      "subtitle": "Tell us about your project and we'll reply within 24 hours.",
+      "cta": "Get in touch",
+      "or": "or via WhatsApp"
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "made": "Made with care in Spain."
+    }
+  }
+}
