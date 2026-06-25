@@ -55,6 +55,29 @@
     "footer": {
       "rights": "Todos los derechos reservados.",
       "made": "Hecho con cariño en España."
+    },
+    "os": {
+      "progmanTitle": "Ruiz & Davies — Administrador de programas",
+      "menu": { "file": "Archivo", "window": "Ventana", "help": "Ayuda" },
+      "booting": "Iniciando Ruiz & Davies 92…",
+      "loading": "Cargando portfolio",
+      "ready": "Listo.",
+      "openHint": "Doble clic para abrir",
+      "tapHint": "Toca para abrir",
+      "visit": "Visitar sitio",
+      "close": "Cerrar",
+      "icons": {
+        "readme": "Léeme",
+        "services": "Servicios",
+        "about": "Nosotros",
+        "contact": "Contacto"
+      },
+      "windows": {
+        "readme": "Léeme.txt",
+        "services": "Servicios",
+        "about": "Nosotros",
+        "contact": "Contacto"
+      }
     }
   },
   "en": {
@@ -113,6 +136,29 @@
     "footer": {
       "rights": "All rights reserved.",
       "made": "Made with care in Spain."
+    },
+    "os": {
+      "progmanTitle": "Ruiz & Davies — Program Manager",
+      "menu": { "file": "File", "window": "Window", "help": "Help" },
+      "booting": "Starting Ruiz & Davies 92…",
+      "loading": "Loading portfolio",
+      "ready": "Ready.",
+      "openHint": "Double-click to open",
+      "tapHint": "Tap to open",
+      "visit": "Visit site",
+      "close": "Close",
+      "icons": {
+        "readme": "Read Me",
+        "services": "Services",
+        "about": "About",
+        "contact": "Contact"
+      },
+      "windows": {
+        "readme": "ReadMe.txt",
+        "services": "Services",
+        "about": "About",
+        "contact": "Contact"
+      }
     }
   }
 }

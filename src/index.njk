@@ -11,91 +11,145 @@ eleventyComputed:
     es: "/"
     en: "/en/"
 ---
+{% import "partials/preview.njk" as comp %}
 {% set t = i18n[lang] %}
 
-<section class="hero">
-  <div class="container hero-inner">
-    <p class="eyebrow">{{ t.hero.eyebrow }}</p>
-    <h1 class="hero-title">{{ t.hero.title }}</h1>
-    <p class="hero-sub">{{ t.hero.subtitle }}</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#contact">{{ t.hero.ctaPrimary }}</a>
-      <a class="btn btn-ghost" href="#work">{{ t.hero.ctaSecondary }}</a>
+{# ---------- DESKTOP ICONS ---------- #}
+<ul class="icons">
+  <li class="icon" data-win="win-readme" tabindex="0">
+    <span class="icon-img"><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+      <path d="M10 4h20l8 8v32H10z" fill="#fff" stroke="#000" stroke-width="2"/>
+      <path d="M30 4v8h8" fill="#c0c0c0" stroke="#000" stroke-width="2"/>
+      <path d="M15 20h18M15 26h18M15 32h12" stroke="#1084d0" stroke-width="2"/>
+    </svg></span>
+    <span class="icon-label">{{ t.os.icons.readme }}</span>
+  </li>
+
+  {%- for p in projects %}
+  <li class="icon" data-win="win-{{ p.slug }}" tabindex="0">
+    <span class="icon-img">{{ comp.sitePreview(p, lang) }}</span>
+    <span class="icon-label">{{ p.name }}</span>
+  </li>
+  {%- endfor %}
+
+  <li class="icon" data-win="win-services" tabindex="0">
+    <span class="icon-img"><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+      <path d="M24 6l3 5h6l-2 6 5 3-5 3 2 6h-6l-3 5-3-5h-6l2-6-5-3 5-3-2-6h6z" fill="#ffcf3f" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="24" cy="24" r="6" fill="#c0c0c0" stroke="#000" stroke-width="2"/>
+    </svg></span>
+    <span class="icon-label">{{ t.os.icons.services }}</span>
+  </li>
+  <li class="icon" data-win="win-about" tabindex="0">
+    <span class="icon-img"><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+      <circle cx="18" cy="17" r="7" fill="#ffcf3f" stroke="#000" stroke-width="2"/>
+      <path d="M6 42c0-7 6-12 12-12s12 5 12 12z" fill="#1084d0" stroke="#000" stroke-width="2"/>
+      <circle cx="32" cy="19" r="6" fill="#ff5a3c" stroke="#000" stroke-width="2"/>
+      <path d="M26 42c0-6 4-11 10-11s10 5 10 11z" fill="#008080" stroke="#000" stroke-width="2"/>
+    </svg></span>
+    <span class="icon-label">{{ t.os.icons.about }}</span>
+  </li>
+  <li class="icon" data-win="win-contact" tabindex="0">
+    <span class="icon-img"><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+      <rect x="6" y="12" width="36" height="24" fill="#fff" stroke="#000" stroke-width="2"/>
+      <path d="M6 12l18 14 18-14" fill="none" stroke="#ff5a3c" stroke-width="2"/>
+    </svg></span>
+    <span class="icon-label">{{ t.os.icons.contact }}</span>
+  </li>
+</ul>
+
+{# ---------- WINDOWS ---------- #}
+
+<section class="window window-readme" id="win-readme" hidden>
+  <div class="title-bar title-bar-active" data-drag>
+    <span class="title-bar-text">{{ t.os.windows.readme }}</span>
+    <div class="title-bar-controls"><button class="tb-btn" data-close aria-label="{{ t.os.close }}">✕</button></div>
+  </div>
+  <div class="window-body">
+    <p class="eyebrow">★ {{ t.hero.eyebrow }} ★</p>
+    <h1 class="readme-title">{{ t.hero.title }}</h1>
+    <p>{{ t.hero.subtitle }}</p>
+    <div class="btn-row">
+      <button class="btn95" data-win="win-contact">{{ t.hero.ctaPrimary }}</button>
+      <button class="btn95" data-close>{{ t.hero.ctaSecondary }}</button>
     </div>
+    <p class="hint" data-openhint>↑ {{ t.os.openHint }}</p>
   </div>
 </section>
 
-<section id="services" class="section">
-  <div class="container">
-    <header class="section-head">
-      <h2>{{ t.services.title }}</h2>
-      <p class="section-sub">{{ t.services.subtitle }}</p>
-    </header>
-    <div class="grid grid-3">
+<section class="window window-services" id="win-services" hidden>
+  <div class="title-bar title-bar-active" data-drag>
+    <span class="title-bar-text">{{ t.os.windows.services }}</span>
+    <div class="title-bar-controls"><button class="tb-btn" data-close aria-label="{{ t.os.close }}">✕</button></div>
+  </div>
+  <div class="window-body">
+    <h2>{{ t.services.title }}</h2>
+    <p class="muted">{{ t.services.subtitle }}</p>
+    <ul class="svc-list">
       {%- for item in t.services.items %}
-      <article class="card service">
-        <span class="service-num">0{{ loop.index }}</span>
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.desc }}</p>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<section id="work" class="section section-alt">
-  <div class="container">
-    <header class="section-head">
-      <h2>{{ t.work.title }}</h2>
-      <p class="section-sub">{{ t.work.subtitle }}</p>
-    </header>
-    <div class="grid grid-2">
-      {%- for p in projects %}
-      <article class="card project">
-        <div class="project-top">
-          <h3>{{ p.name }}</h3>
-          <span class="project-year">{{ p.year }}</span>
+      <li>
+        <span class="svc-num">{{ loop.index }}.</span>
+        <div>
+          <strong>{{ item.name }}</strong>
+          <p>{{ item.desc }}</p>
         </div>
-        <p class="project-cat">{{ p.category[lang] }}</p>
-        <p class="project-summary">{{ p.summary[lang] }}</p>
-        <div class="project-foot">
-          <ul class="tags">
-            {%- for tag in p.tags %}<li>{{ tag }}</li>{%- endfor %}
-          </ul>
-          <a class="link-arrow" href="{{ p.url }}" target="_blank" rel="noopener">
-            {{ t.work.visit }} <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<section id="about" class="section">
-  <div class="container about-grid">
-    <div class="about-text">
-      <h2>{{ t.about.title }}</h2>
-      <p>{{ t.about.body }}</p>
-    </div>
-    <ul class="founders">
-      {%- for f in t.about.founders %}
-      <li class="founder">
-        <span class="founder-name">{{ f.name }}</span>
-        <span class="founder-role">{{ f.role }}</span>
       </li>
       {%- endfor %}
     </ul>
   </div>
 </section>
 
-<section id="contact" class="section section-contact">
-  <div class="container contact-inner">
+{%- for p in projects %}
+<section class="window window-project" id="win-{{ p.slug }}" hidden style="--accent: {{ p.accent }}">
+  <div class="title-bar title-bar-active" data-drag>
+    <span class="title-bar-text">{{ p.name }}</span>
+    <div class="title-bar-controls"><button class="tb-btn" data-close aria-label="{{ t.os.close }}">✕</button></div>
+  </div>
+  <div class="window-body">
+    <div class="proj-preview">{{ comp.sitePreview(p, lang) }}</div>
+    <p class="project-cat">{{ p.category[lang] }} · {{ p.year }}</p>
+    <p>{{ p.summary[lang] }}</p>
+    <ul class="tags">
+      {%- for tag in p.tags %}<li>{{ tag }}</li>{%- endfor %}
+    </ul>
+    <a class="btn95 btn95-go" href="{{ p.url }}" target="_blank" rel="noopener">{{ t.os.visit }} ↗</a>
+  </div>
+</section>
+{%- endfor %}
+
+<section class="window window-about" id="win-about" hidden>
+  <div class="title-bar title-bar-active" data-drag>
+    <span class="title-bar-text">{{ t.os.windows.about }}</span>
+    <div class="title-bar-controls"><button class="tb-btn" data-close aria-label="{{ t.os.close }}">✕</button></div>
+  </div>
+  <div class="window-body">
+    <h2>{{ t.about.title }}</h2>
+    <p>{{ t.about.body }}</p>
+    <ul class="founders">
+      {%- for f in t.about.founders %}
+      <li class="founder">
+        <span class="founder-av">{{ f.name | truncate(1, true, "") }}</span>
+        <div>
+          <strong>{{ f.name }}</strong>
+          <span class="muted">{{ f.role }}</span>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="window window-contact" id="win-contact" hidden>
+  <div class="title-bar title-bar-active" data-drag>
+    <span class="title-bar-text">{{ t.os.windows.contact }}</span>
+    <div class="title-bar-controls"><button class="tb-btn" data-close aria-label="{{ t.os.close }}">✕</button></div>
+  </div>
+  <div class="window-body">
     <h2>{{ t.contact.title }}</h2>
-    <p class="section-sub">{{ t.contact.subtitle }}</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="mailto:{{ site.email }}">{{ t.contact.cta }}</a>
-      <a class="btn btn-ghost" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">{{ t.contact.or }}</a>
+    <p class="muted">{{ t.contact.subtitle }}</p>
+    <div class="btn-row">
+      <a class="btn95" href="mailto:{{ site.email }}">✉ {{ t.contact.cta }}</a>
+      <a class="btn95" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">{{ t.contact.or }}</a>
     </div>
+    <p class="hint muted">{{ site.email }}</p>
   </div>
 </section>

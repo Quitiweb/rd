@@ -4,14 +4,17 @@ layout: layouts/base.njk
 lang: es
 eleventyExcludeFromCollections: true
 ---
-<section class="hero">
-  <div class="container hero-inner">
-    <p class="eyebrow">Error 404</p>
-    <h1 class="hero-title">Página no encontrada</h1>
-    <p class="hero-sub">La página que buscas no existe o se ha movido. / The page you're looking for doesn't exist or has moved.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="{{ '/' | url }}">Inicio</a>
-      <a class="btn btn-ghost" href="{{ '/en/' | url }}">Home (EN)</a>
+<section class="window window-readme" id="win-404" style="left:50%;top:60px;transform:translateX(-50%)">
+  <div class="title-bar title-bar-active" data-drag>
+    <span class="title-bar-text">Error</span>
+  </div>
+  <div class="window-body">
+    <p class="eyebrow">⚠ 404 ⚠</p>
+    <h1 class="readme-title">Página no encontrada</h1>
+    <p>La página que buscas no existe o se ha movido.<br>The page you're looking for doesn't exist or has moved.</p>
+    <div class="btn-row">
+      <a class="btn95" href="{{ '/' | url }}">Inicio</a>
+      <a class="btn95" href="{{ '/en/' | url }}">Home (EN)</a>
     </div>
   </div>
 </section>

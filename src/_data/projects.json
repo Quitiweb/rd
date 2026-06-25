@@ -3,7 +3,9 @@
     "slug": "good-vibes-apartments",
     "name": "Good Vibes Apartments",
     "url": "https://goodvibesapartments.com",
+    "host": "goodvibesapartments.com",
     "year": "2026",
+    "accent": "#ff5a3c",
     "tags": ["web", "marketing", "seo"],
     "category": { "es": "Alquiler vacacional", "en": "Vacation rentals" },
     "summary": {
@@ -15,7 +17,9 @@
     "slug": "juro-spain",
     "name": "Juro Spain",
     "url": "https://jurospain.com",
+    "host": "jurospain.com",
     "year": "2026",
+    "accent": "#1084d0",
     "tags": ["web", "consulting"],
     "category": { "es": "Servicios profesionales", "en": "Professional services" },
     "summary": {
@@ -27,7 +31,9 @@
     "slug": "quitiweb",
     "name": "Quitiweb",
     "url": "https://quitiweb.com",
+    "host": "quitiweb.com",
     "year": "2025",
+    "accent": "#008080",
     "tags": ["web", "branding"],
     "category": { "es": "Estudio web", "en": "Web studio" },
     "summary": {
@@ -39,7 +45,9 @@
     "slug": "ana-ruiz-romero",
     "name": "Ana Ruiz Romero",
     "url": "https://anaruizromero.com",
+    "host": "anaruizromero.com",
     "year": "2025",
+    "accent": "#a23ab0",
     "tags": ["web", "personal"],
     "category": { "es": "Web personal", "en": "Personal site" },
     "summary": {

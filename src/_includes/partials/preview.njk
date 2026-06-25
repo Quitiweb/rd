@@ -1,0 +1,13 @@
+{% macro sitePreview(p, lang) %}
+<div class="site-preview" style="--accent: {{ p.accent }}">
+  <div class="sp-bar">
+    <span class="sp-btns"><i></i><i></i><i></i></span>
+    <span class="sp-url">{{ p.host }}</span>
+  </div>
+  <div class="sp-screen">
+    <span class="sp-logo">{{ p.name | truncate(1, true, "") }}</span>
+    <span class="sp-name">{{ p.name }}</span>
+    <span class="sp-cat">{{ p.category[lang] }}</span>
+  </div>
+</div>
+{% endmacro %}

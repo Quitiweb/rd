@@ -1,3 +1,5 @@
+{% import "partials/preview.njk" as comp %}
+{% set t = i18n[lang] %}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
@@ -21,15 +23,56 @@
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | url }}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
 </head>
-<body>
-{% include "partials/header.njk" %}
-<main>
+<body class="booting">
+
+  <!-- ░░ BOOT / LOADING SCREEN ░░ -->
+  <div id="boot" class="boot">
+    <div class="boot-window">
+      <div class="title-bar title-bar-active">
+        <span class="title-bar-text">Ruiz &amp; Davies 92</span>
+      </div>
+      <div class="boot-body">
+        <div class="boot-logo">R&amp;D</div>
+        <p class="boot-status"><span id="bootStatus">{{ t.os.booting }}</span></p>
+        <div class="boot-thumbs" id="bootThumbs" aria-hidden="true">
+          {%- for p in projects %}
+          <div class="boot-thumb" data-i="{{ loop.index0 }}">{{ comp.sitePreview(p, lang) }}</div>
+          {%- endfor %}
+        </div>
+        <div class="progress"><div class="progress-fill" id="bootFill"></div></div>
+        <p class="boot-pct"><span id="bootPct">0</span>%</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ░░ DESKTOP / PROGRAM MANAGER ░░ -->
+  <div id="desktop" class="progman" hidden>
+    <div class="title-bar title-bar-active progman-title">
+      <span class="title-bar-text">{{ t.os.progmanTitle }}</span>
+      <div class="title-bar-controls">
+        <button class="tb-btn" aria-label="—" tabindex="-1">_</button>
+        <button class="tb-btn" aria-label="□" tabindex="-1">□</button>
+      </div>
+    </div>
+
+    <div class="menubar">
+      <button class="menu-item" tabindex="-1">{{ t.os.menu.file }}</button>
+      <button class="menu-item" tabindex="-1">{{ t.os.menu.window }}</button>
+      <button class="menu-item" tabindex="-1">{{ t.os.menu.help }}</button>
+      <div class="menubar-right">
+        <a class="lang-btn" href="{{ altUrls[langmeta[lang].other] | url }}" hreflang="{{ langmeta[lang].other }}">{{ langmeta[langmeta[lang].other].label }}</a>
+        <span class="clock" id="clock">--:--</span>
+      </div>
+    </div>
+
+    <main class="desktop-area">
 {{ content | safe }}
-</main>
-{% include "partials/footer.njk" %}
-<script src="{{ '/assets/js/main.js' | url }}" defer></script>
+    </main>
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | url }}" defer></script>
 </body>
 </html>
