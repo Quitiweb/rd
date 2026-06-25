@@ -127,7 +127,10 @@ eleventyComputed:
     <ul class="founders">
       {%- for f in t.about.founders %}
       <li class="founder">
-        <span class="founder-av">{{ f.name | truncate(1, true, "") }}</span>
+        <span class="founder-av">
+          {%- if f.photo %}<img src="{{ f.photo | url }}" alt="{{ f.name }}" width="44" height="44" loading="lazy">
+          {%- else %}{{ f.name | truncate(1, true, "") }}{% endif %}
+        </span>
         <div>
           <strong>{{ f.name }}</strong>
           <span class="muted">{{ f.role }}</span>

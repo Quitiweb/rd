@@ -42,8 +42,8 @@
       "title": "Quiénes somos",
       "body": "Ruiz & Davies nace de la unión de Rafael Ruiz y Luke Davies: desarrollo, diseño y marketing bajo un mismo techo. Combinamos criterio técnico con una mirada comercial para construir productos digitales que se ven bien y, sobre todo, funcionan.",
       "founders": [
-        { "name": "Rafael Ruiz", "role": "Desarrollo & tecnología" },
-        { "name": "Luke Davies", "role": "Estrategia & marketing" }
+        { "name": "Rafael Ruiz", "role": "Desarrollo & tecnología", "photo": "/assets/img/rafael-ruiz.png" },
+        { "name": "Luke Davies", "role": "Estrategia & marketing", "photo": "/assets/img/luke-davies.png" }
       ]
     },
     "contact": {
@@ -123,8 +123,8 @@
       "title": "Who we are",
       "body": "Ruiz & Davies brings together Rafael Ruiz and Luke Davies: development, design and marketing under one roof. We blend technical judgement with a commercial eye to build digital products that look great and, above all, work.",
       "founders": [
-        { "name": "Rafael Ruiz", "role": "Development & technology" },
-        { "name": "Luke Davies", "role": "Strategy & marketing" }
+        { "name": "Rafael Ruiz", "role": "Development & technology", "photo": "/assets/img/rafael-ruiz.png" },
+        { "name": "Luke Davies", "role": "Strategy & marketing", "photo": "/assets/img/luke-davies.png" }
       ]
     },
     "contact": {

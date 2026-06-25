@@ -298,10 +298,14 @@ a { color: var(--navy); }
 .founders { display: grid; gap: 10px; margin-top: 12px; }
 .founder { display: flex; align-items: center; gap: 10px; }
 .founder-av {
-  width: 38px; height: 38px; flex: none;
-  display: grid; place-items: center;
+  width: 44px; height: 44px; flex: none;
+  display: grid; place-items: center; overflow: hidden;
   font-family: var(--pixel); font-size: 14px; color: #fff;
   background: var(--navy); box-shadow: var(--bevel-up);
+}
+.founder-av img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  image-rendering: auto;
 }
 .founder strong { display: block; font-size: 14px; }
 
