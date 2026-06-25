@@ -84,13 +84,18 @@
     if (!win) return;
     if (win.hidden) {
       win.hidden = false;
-      if (!win.dataset.placed && !coarse) {
+      if (coarse) {
+        // mobile: always reopen centered (CSS handles it when not dragged)
+        win.classList.remove("dragged");
+        win.style.left = "";
+        win.style.top = "";
+      } else if (!win.dataset.placed) {
         var off = 24 + (cascade % 6) * 24;
         win.style.left = off + "px";
         win.style.top = (20 + (cascade % 6) * 22) + "px";
         cascade++;
+        win.dataset.placed = "1";
       }
-      win.dataset.placed = "1";
     }
     focusWindow(win);
   }
@@ -140,8 +145,12 @@
       var rect = win.getBoundingClientRect();
       var dx = e.clientX - rect.left;
       var dy = e.clientY - rect.top;
+      // Freeze the current rendered position as inline coords BEFORE removing
+      // the centering transform, so the window doesn't jump (esp. on mobile).
+      win.style.left = (rect.left - area.left) + "px";
+      win.style.top = (rect.top - area.top) + "px";
       win.classList.add("dragged");
-      bar.setPointerCapture(e.pointerId);
+      try { bar.setPointerCapture(e.pointerId); } catch (err) {}
 
       function move(ev) {
         var left = ev.clientX - area.left - dx;
@@ -152,7 +161,7 @@
         win.style.top = top + "px";
       }
       function up(ev) {
-        bar.releasePointerCapture(e.pointerId);
+        try { bar.releasePointerCapture(e.pointerId); } catch (err) {}
         bar.removeEventListener("pointermove", move);
         bar.removeEventListener("pointerup", up);
       }
