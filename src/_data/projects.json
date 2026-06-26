@@ -21,10 +21,24 @@
     "year": "2026",
     "accent": "#1084d0",
     "tags": ["web", "consulting"],
-    "category": { "es": "Servicios profesionales", "en": "Professional services" },
+    "category": { "es": "Inmigración y traslados", "en": "Immigration & relocation" },
     "summary": {
-      "es": "Presencia digital y sitio corporativo para servicios profesionales en España.",
-      "en": "Digital presence and corporate site for professional services in Spain."
+      "es": "Expertos en inmigración y traslados a España para angloparlantes. La alternativa moderna a los despachos tradicionales: estrategia de alto nivel y una red de abogados españoles colegiados para visados, propiedad y residencia fiscal.",
+      "en": "English-speaking immigration & relocation experts. The modern alternative to traditional firms, combining executive-level strategy with a vetted network of registered Spanish attorneys for visas, property and tax residency."
+    }
+  },
+  {
+    "slug": "konstru",
+    "name": "Konstru",
+    "url": "http://konstru.es",
+    "host": "konstru.es",
+    "year": "2026",
+    "accent": "#ff5126",
+    "tags": ["web", "branding"],
+    "category": { "es": "Construcción de lujo", "en": "Luxury construction" },
+    "summary": {
+      "es": "Marca y web editorial para una constructora de lujo: hoteles, fincas ecuestres y arquitectura singular en España, Reino Unido y Latinoamérica.",
+      "en": "Brand and editorial website for a luxury construction firm building hotels, equestrian estates and landmark architecture across Spain, the UK and Latin America."
     }
   },
   {
