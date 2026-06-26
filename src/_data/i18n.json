@@ -77,6 +77,14 @@
         "services": "Servicios",
         "about": "Nosotros",
         "contact": "Contacto"
+      },
+      "apps": {
+        "files": "Archivos",
+        "calc": "Calculadora",
+        "mines": "Buscaminas",
+        "filesPath": "C:\\RUIZDAVIES\\PORTFOLIO",
+        "flagMode": "Modo bandera",
+        "minesHint": "Clic = descubrir · clic derecho o pulsación larga = bandera"
       }
     }
   },
@@ -158,6 +166,14 @@
         "services": "Services",
         "about": "About",
         "contact": "Contact"
+      },
+      "apps": {
+        "files": "File Manager",
+        "calc": "Calculator",
+        "mines": "Minesweeper",
+        "filesPath": "C:\\RUIZDAVIES\\PORTFOLIO",
+        "flagMode": "Flag mode",
+        "minesHint": "Click = reveal · right-click or long-press = flag"
       }
     }
   }
